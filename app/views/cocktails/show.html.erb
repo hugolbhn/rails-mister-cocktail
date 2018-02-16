@@ -3,6 +3,8 @@
 
 <div class="container">
   <h1> <%= @cocktail.name %> </h1>
+  <%= cl_image_tag("kkpl7ftp12eojkkh1sdq",
+      width: 400, height: 300, crop: :fill) %>
   <ul class="list-unstyled"> <% @cocktail.doses.each do |dose| %>
     <li> <%= dose.ingredient.name %>||<%= dose.description %> - <%= link_to "Delete", dose_path(dose),
             method: :delete,
