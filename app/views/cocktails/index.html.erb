@@ -1,6 +1,7 @@
 <h1>Cocktails</h1>
-<% @cocktail.each do |cocktail| %>
-  <p><%= link_to "#{cocktail.title}", show_path(cocktail) %></p>
+<% @cocktails.each do |cocktail| %>
+  <p><%= link_to "#{cocktail.name}", cocktail_path(cocktail) %></p>
+
 <% end %>
-<!-- <p><%= link_to "Add cocktail", new_cocktail_path %></p> -->
+<p><%= link_to "Add cocktail", new_cocktail_path %></p>
 
